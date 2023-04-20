@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Association</title>
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="navbar">
+      <h1 class="header"> Blood Donation Association</h1>
+
+      <span>
+        <a href="/" class="pe-2, homeBtn">Home</a>
+        <a href="/profile" class="pe-3, profileBtn">Profile</a>
+        <a href="/donorlist" class="pe-3, profileBtn">Donor List</a>
+        {{#if loggedIn}}
+        <button id="logout" class="logout">Logout</button>
+        {{else}}
+        <a href="/login" class="login">Login</a>
+        {{/if}}
+      </span>
+
+    </nav>
+  </header>
+  <main class="container container-fluid mt-5">
+    <!-- Render the contents of the sub layout here -->
+    {{{ body }}}
+
+  </main>
+
+  <footer class="footer">
+    Made by: Aiden Miller, Ebony Ford, and Christopher Snyder
+  </footer>
+
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+
+</body>
+
+</html>

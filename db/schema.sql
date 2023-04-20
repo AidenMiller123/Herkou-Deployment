@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS blood_db;
+CREATE DATABASE blood_db;

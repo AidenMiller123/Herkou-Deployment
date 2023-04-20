@@ -1,0 +1,135 @@
+<div class="col-md-12 col-lg-12 col-xl-12 col-sm-12">
+
+  <h2 class="page-title">Input information to be added to a donor list or <a href="/scheduler"
+      class="btn btn-danger">Schedule Appointment Today!</a>
+  </h2>
+  <div class="row">
+
+    <form class="form-profile donor-form mr-5">
+
+      <div class="form-group">
+        <label for="donor-name">Name:</label>
+        <input class="form-input" value="" type="text" id="donorName" />
+      </div>
+
+      <div class="form-group">
+        <label for="donor-height">Height:</label>
+        <select class="form-input" id="donorHeight">
+          <option value="">Select Height</option>
+          <option value="54">4'6"</option>
+          <option value="55">4'7"</option>
+          <option value="56">4'8"</option>
+          <option value="57">4'9"</option>
+          <option value="58">4'10"</option>
+          <option value="59">4'11"</option>
+          <option value="60">5'0"</option>
+          <option value="61">5'1"</option>
+          <option value="62">5'2"</option>
+          <option value="63">5'3"</option>
+          <option value="64">5'4"</option>
+          <option value="65">5'5"</option>
+          <option value="66">5'6"</option>
+          <option value="67">5'7"</option>
+          <option value="68">5'8"</option>
+          <option value="69">5'9"</option>
+          <option value="70">5'10"</option>
+          <option value="71">5'11"</option>
+          <option value="72">6'0"</option>
+          <option value="73">6'1"</option>
+          <option value="74">6'2"</option>
+          <option value="75">6'3"</option>
+          <option value="76">6'4"</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="donor-weight">Weight:</label>
+        <input class="form-input" value="" type="number" id="donorWeight" />
+      </div>
+
+      <div class="form-group">
+        <label for="donor-gender">Gender:</label>
+        <select class="form-input" id="donorGender">
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="donor-type">Blood Type:</label>
+        <select class="form-input" id="donorType">
+          <option value="">Select Bloodtype</option>
+          <option value="A+">A+</option>
+          <option value="A-">A-</option>
+          <option value="B+">B+</option>
+          <option value="B-">B-</option>
+          <option value="AB+">AB+</option>
+          <option value="AB-">AB-</option>
+          <option value="O+">O+</option>
+          <option value="O-">O-</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="donor-age">Age:</label>
+        <input class="form-input" value="" type="number" id="donorAge" />
+      </div>
+
+      <div class="form-group">
+        <label for="donor-phone">Phone Number:</label>
+        <input class="form-input" value="" type="number" id="donorPhone" />
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+
+      <div class="form-group" style="display:none;">
+        <p id="donor_userId">{{donor.user_id}}</p>
+      </div>
+
+      <div class="form-group" style="display:none;">
+        <p id="userId">{{user.id}}</p>
+      </div>
+
+    </form>
+    <div class="card card-rounded col-md-5 text-center ml-5 donorProfileCard">
+      <div class="">
+        <div class="card-header">
+
+          <h3>Donor Name: {{donor.name}}</h3>
+
+        </div>
+
+        <div class="card-body">
+
+          <div>
+            <p><strong>Height: </strong>{{donor.height}} in.</p>
+          </div>
+
+          <div>
+            <p><strong>Weight: </strong>{{donor.weight}} lbs.</p>
+          </div>
+
+          <div>
+            <p><strong>Gender: </strong>{{donor.gender}} </p>
+          </div>
+
+          <div>
+            <p><strong>Blood Type: </strong>{{donor.bloodtype}} </p>
+          </div>
+
+          <div>
+            <p><strong>Age: </strong>{{donor.age }} </p>
+          </div>
+
+          <div>
+            <p><strong>Phone Number: </strong>{{donor.phone}} </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <script src="./js/donorlistform.js"></script>
